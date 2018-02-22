@@ -28,16 +28,7 @@ massive(process.env.CONNECTION_STRING).then(db => {
 });
 
 app.get('/auth/callback', authController.connect);
-// app.get('/api/user-data', checkUserStatus, userController.getUser);
-app.get('/api/user-data', (req, res) => {
-  // return res.status(403).json({ message: 'sorry!' });
-  res.json({
-    user: {
-      name: 'T$',
-      email: 'etc',
-    }
-  })
-})
+app.get('/api/user-data', checkUserStatus, userController.getUser);
 app.post('/api/logout', userController.logoutUser);
 
 const PORT = process.env.SERVER_PORT || 4000;
