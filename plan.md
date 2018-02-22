@@ -9,7 +9,7 @@
       * Environment variables - dotenv
     * Account
       * User info (redux)
-      * axios to fetch user info
+      * ~~axios to fetch user info~~
   * Redux
     * Store
     * Ducks folder
@@ -31,10 +31,10 @@
   * Server
     * Proxy in package.json
     * API endpoints
-      * GET user data
+      * ~~GET user data~~
         * Ensure user is logged in (middleware)
       * Auth login (callback)
-      * Logout
+      * ~~Logout~~
 * Packages
   * dotenv
   * axios

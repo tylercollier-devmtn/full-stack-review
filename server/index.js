@@ -5,6 +5,7 @@ const massive = require('massive');
 const bodyParser = require('body-parser');
 const authController = require('./controllers/authController');
 const userController = require('./controllers/userController');
+const checkUserStatus = require('./middlewares/checkUserStatus');
 
 require('dotenv').config();
 
@@ -27,7 +28,16 @@ massive(process.env.CONNECTION_STRING).then(db => {
 });
 
 app.get('/auth/callback', authController.connect);
-app.get('/api/user-data', userController.getUser);
+// app.get('/api/user-data', checkUserStatus, userController.getUser);
+app.get('/api/user-data', (req, res) => {
+  // return res.status(403).json({ message: 'sorry!' });
+  res.json({
+    user: {
+      name: 'T$',
+      email: 'etc',
+    }
+  })
+})
 app.post('/api/logout', userController.logoutUser);
 
 const PORT = process.env.SERVER_PORT || 4000;
