@@ -1,9 +1,9 @@
 # Plan
 
 * Front-end
-  * Routing - let's try BrowserRouter instead of HashRouter
+  * ~~Routing - let's try BrowserRouter instead of HashRouter~~
   * Components
-    * Login
+    * ~~Login~~
       * Picture
       * Button
       * Environment variables - dotenv
