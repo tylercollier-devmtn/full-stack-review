@@ -1,7 +1,5 @@
 const initialState = {
-  user: {
-    name: 'T$ from reducer'
-  },
+  user: null,
 };
 
 const LOG_IN = 'LOG_IN';
@@ -15,3 +13,9 @@ export default function(state = initialState, action) {
   }
 };
 
+export function logIn(user) {
+  return {
+    type: LOG_IN,
+    payload: user,
+  };
+};
