@@ -17,7 +17,7 @@
     * Action creators
     * Action names
 * Back-end
-  * Database
+  * ~~Database~~
     * User table
       * id (serial)
       * name
