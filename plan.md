@@ -24,7 +24,7 @@
       * auth0_sub
       * email
       * picture
-    * Queries
+    * ~~Queries~~
       * Look up user by auth0_id
       * Add user
       * Init
